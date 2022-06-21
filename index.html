@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Filipe Lopes">
+    <meta name="description" content="Portfólio do desenvolvedor front-end Filipe Lopes da S.">
+    <meta name="keywords" content="portfolio, html, front-end, desenvolvimento, css, javascript">
+    <title>Portifólio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header container">
+            <div class="header-logo">
+                <a href="">{ FL }</a>
+            </div>
+            <div class="header-menu">
+                <div class="menu-mobile" onclick="showMenuMobile()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+
+
+                <nav id="menu">
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="main">
+        <div class="main-content">
+            <h1 class="-">Olá, eu sou <br> <span>Filipe Lopes</span><br>Desenvolvedor Front-end</h1>
+            <div class="buttons-contacts">
+                <a href="https://www.linkedin.com/in/filipe-lopes-da-silva-003b12125/">
+                    <img src="css/images/linkedin.png" alt="linkedin">
+                    <p>Linkedin</p>
+                </a>
+                <a href="https://github.com/Filipee-Lopes">
+                    <img src="css/images/github.png" alt="github">
+                    <p>Github</p>
+                </a>
+
+            </div>
+        </div>
+        <div class="main-photo init-hidden">
+            <div class="photo-animation" data-titl="">
+                <img src="css/images/IMG_20211219_171825.png" alt="">
+            </div>
+        </div>
+    </section>
+    <section id="sobre">
+        <div class="sobre init-hidden">
+            <h2>Sobre mim</h2>
+            <p>
+                Atualmente estou em transição de carreira com dedicação nos estudos para futuramente ser um
+                desenvolvedor fullstack.
+                Em set/2021 tomei a decisão de estudar por conta própria fazendo cursos e hoje já entedendo as
+                tecnologias voltadas para atuar no Front-end.
+            </p>
+        </div>
+    </section>
+    <section class="  projects">
+        <h2>Projetos</h2>
+        <div class="slider init-hidden ">
+            <div class="slider-controls">
+                <button class="slider-control--left" aria-label="Previous image" onclick="goPrev()"> < </button>
+                <button class="slider-control--right" aria-label="Next Image" onclick="goNext()"> > </button>
+            </div>
+
+            <div class="slides">
+                <div class="slide" style="background-color:green; ">
+                    <div class="projects-item">
+                        <div class="breve"> Em breve</div>
+                    </div>
+                </div>
+
+                <div class="slide" style="background-color:red; ">
+                    <div class="projects-item">
+                        <div>Slide 2</div>
+                    </div>
+                </div>
+
+                <div class="slide" style="background-color:blue; ">
+                    <div class="projects-item">
+                        <div>Slide 3</div>
+                    </div>
+                </div>
+
+                <div class="slide" style="background-color: brown; ">
+                    <div class="projects-item">
+                        <div>Slide 4</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="technologies ">
+        <h2>Habilidades</h2>
+        <div class="technologies-area init-hidden">
+            <div class="technologies-item">
+                <div class="description">
+                    HTML 5 - SEO - HTML Semântico
+                </div>
+                <img src="css/images/html.png" alt="">
+            </div>
+            <div class="technologies-item">
+                <div class="description">
+                    CSS 3 - Responsividade -
+                </div>
+                <img src="css/images/css-3.png" alt="">
+            </div>
+            <div class="technologies-item">
+                <div class="description">
+                    Javascript - Funções - etc
+                </div>
+                <img src="css/images/java-script.png" alt="">
+            </div>
+            <div class="technologies-item">
+                <div class="description">
+                    Typescript - Tipagem - Integração com NodeJS
+                </div>
+                <img src="css/images/typescript.png" alt="">
+            </div class="technologies-item">
+            <div class="technologies-item">
+                <div class="description">
+                    Git - Versionamento - Branchs - Github
+                </div>
+                <img src="css/images/git.png" alt="">
+            </div>
+        </div>
+    </section>
+   
+    <footer>
+        <div>
+            <p>Criado por Filipe Lopes</p>
+        </div>
+    </footer>
+    <script src="js/vanilla-tilt.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
