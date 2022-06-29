@@ -9,6 +9,7 @@
     <meta name="keywords" content="portfolio, html, front-end, desenvolvimento, css, javascript">
     <title>Portifólio</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/img" href="css/images/programador.png">
 </head>
 
 <body>
@@ -27,9 +28,9 @@
 
                 <nav id="menu">
                     <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="">Contato</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#contacts">Contato</a></li>
                     </ul>
                 </nav>
             </div>
@@ -37,7 +38,7 @@
     </header>
     <section class="main">
         <div class="main-content">
-            <h1 class="-">Olá, eu sou <br> <span>Filipe Lopes</span><br>Desenvolvedor Front-end</h1>
+            <h1>Olá, eu sou <br> <span>Filipe Lopes</span><br>Desenvolvedor Front-end</h1>
             <div class="buttons-contacts">
                 <a href="https://www.linkedin.com/in/filipe-lopes-da-silva-003b12125/">
                     <img src="css/images/linkedin.png" alt="linkedin">
@@ -47,98 +48,118 @@
                     <img src="css/images/github.png" alt="github">
                     <p>Github</p>
                 </a>
+            </div>
+        </div>
 
+    </section>
+    <section>
+        <h2  id="about">Sobre mim</h2>
+        <div  class="about init-hidden">
+            <div class="about-content">
+                <p>
+                    Atualmente em transição de carreira, iniciei os estudos de desenvolvimento em 2021, me reconheço como
+                    entusiasta em novas tecnologias do mercado, com aprendizado adquirido dia após dia.
+                    Possuo foco em desenvolvimento com Javascript, TypeScript, React, NodeJS e outras tecnologias que uso para
+                    criar aplicações web de alto nível e valor.
+                    Me considero ágil e consistente em aprender uma nova tecnologia e alta adaptabilidade às mudanças,
+                    pronto para superar qualquer desafio!
+                </p>    
             </div>
-        </div>
-        <div class="main-photo init-hidden">
-            <div class="photo-animation" data-titl="">
-                <img src="css/images/IMG_20211219_171825.png" alt="">
+         
+            <div class="about-photo ">
+                <div class="photo-animation">
+                    <img src="css/images/IMG_20211219_171825.png" alt="">
+                </div>
             </div>
         </div>
     </section>
-    <section id="sobre">
-        <div class="sobre init-hidden">
-            <h2>Sobre mim</h2>
-            <p>
-                Atualmente estou em transição de carreira com dedicação nos estudos para futuramente ser um
-                desenvolvedor fullstack.
-                Em set/2021 tomei a decisão de estudar por conta própria fazendo cursos e hoje já entedendo as
-                tecnologias voltadas para atuar no Front-end.
-            </p>
-        </div>
-    </section>
-    <section class="  projects">
+    <section class="projects">
         <h2>Projetos</h2>
-        <div class="slider init-hidden ">
-            <div class="slider-controls">
-                <button class="slider-control--left" aria-label="Previous image" onclick="goPrev()"> < </button>
-                <button class="slider-control--right" aria-label="Next Image" onclick="goNext()"> > </button>
-            </div>
-
-            <div class="slides">
-                <div class="slide" style="background-color:green; ">
-                    <div class="projects-item">
-                        <div class="breve"> Em breve</div>
-                    </div>
+        <div class="projects-area init-hidden">
+            <a href="#" class="project-item">
+                <div >
+                    <p>Em breve1</p>
                 </div>
-
-                <div class="slide" style="background-color:red; ">
-                    <div class="projects-item">
-                        <div>Slide 2</div>
-                    </div>
+            </a>
+            <a href="#" class="project-item">
+                <div>
+                    <p>Em breve2</p>
                 </div>
-
-                <div class="slide" style="background-color:blue; ">
-                    <div class="projects-item">
-                        <div>Slide 3</div>
-                    </div>
+            </a>
+            <a href="#" class="project-item">
+                <div >
+                    <p>Em breve3</p>
                 </div>
-
-                <div class="slide" style="background-color: brown; ">
-                    <div class="projects-item">
-                        <div>Slide 4</div>
-                    </div>
+            </a>
+            <a href="#" class="project-item hidden">
+                <div >
+                    <p>Em breve4</p>
                 </div>
-            </div>
+            </a>
+            <a href="#" class="project-item hidden">
+                <div >
+                    <p>Em breve5</p>
+                </div>
+            </a>
+            <a href="#" class="project-item hidden">
+                <div>
+                    <p>Em breve6</p>
+                </div>
+            </a>
+        </div>
+        <button class="showProjects" onclick="showProjects()">Ver mais</button>
+
+        
+
+
+
+
+
+
+
+        <div class="projects-area projects-area--show">
+           
+            <div class="projectScroll" onclick="closedProjects()">Ver Menos</div>
         </div>
     </section>
     <section class="technologies ">
         <h2>Habilidades</h2>
         <div class="technologies-area init-hidden">
             <div class="technologies-item">
-                <div class="description">
-                    HTML 5 - SEO - HTML Semântico
-                </div>
                 <img src="css/images/html.png" alt="">
             </div>
             <div class="technologies-item">
-                <div class="description">
-                    CSS 3 - Responsividade -
-                </div>
                 <img src="css/images/css-3.png" alt="">
             </div>
             <div class="technologies-item">
-                <div class="description">
-                    Javascript - Funções - etc
-                </div>
                 <img src="css/images/java-script.png" alt="">
             </div>
             <div class="technologies-item">
-                <div class="description">
-                    Typescript - Tipagem - Integração com NodeJS
-                </div>
                 <img src="css/images/typescript.png" alt="">
             </div class="technologies-item">
             <div class="technologies-item">
-                <div class="description">
-                    Git - Versionamento - Branchs - Github
-                </div>
                 <img src="css/images/git.png" alt="">
             </div>
         </div>
     </section>
-   
     <footer>
+        <div class="contacts" id="contacts">
+            <div class="contacts-item">
+                <a href="https://www.linkedin.com/in/filipe-lopes-da-silva-003b12125/">
+                    <img src="css/images/linkedin.png" alt="">
+                </a>
+            </div>
+            <div class="contacts-item">
+                <a href="mailto:filipee.lopes92@gmail.com">
+                    <img src="css/images/gmail.png" alt="">
+                </a>
+            </div>
+            <div class="contacts-item">
+                <a href="https://github.com/Filipee-Lopes">
+                    <img src="css/images/github.png" alt="">
+                </a>
+            </div>
+        </div>
         <div>
             <p>Criado por Filipe Lopes</p>
         </div>

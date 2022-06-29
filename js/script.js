@@ -1,37 +1,44 @@
+//Function show menu mobile
 function showMenuMobile() {
-  let menu = document.querySelector('.header-menu nav ul');
-  if(menu.style.display == 'flex'){
-    menu.style.display = 'none'
-  }else{
-    menu.style.display = 'flex'
-  }
+    let menu = document.querySelector('.header-menu nav ul');
+    if (menu.style.display == 'flex') {
+        menu.style.display = 'none'
+    } else {
+        menu.style.display = 'flex'
+    }
 }
 
+//Function set vanilla Tilt
+
+function animationVanillaTilt() {
+    let display = document.body.clientWidth;
+    let elemento = document.querySelector('.photo-animation')
+    if (display > 770) {
+        VanillaTilt.init(elemento, {
+            max: 20,
+            speed: 200,
+            glare: true
+        });
+    }
+}
+
+animationVanillaTilt()
 
 
 
-VanillaTilt.init(document.querySelector(".photo-animation"), {
-    max: 25,
-    speed: 200,
-    glare: true
-});
-
+//Function set Intersection Observer
 let options = {
     root: null,
     rootMargin: '0px',
     threshold: .25
 }
 
-
 const observer = new IntersectionObserver(entries => {
-    console.log(entries, 'ok')
     Array.from(entries).forEach(entry => {
         if (entry.intersectionRatio >= 0.1) {
             entry.target.classList.add('init-hidden--off')
         }
     })
-
-
 }, options)
 
 
@@ -39,34 +46,25 @@ Array.from(document.querySelectorAll('.init-hidden')).forEach(element => {
     observer.observe(element)
 })
 
+//Function oppen more projects
+function showProjects() {
+    let projectsItem = document.querySelectorAll('.projects-area .project-item');
+    let showProjectsButton = document.querySelector('.showProjects');
 
-let totalSlides = document.querySelectorAll('.slide').length;
-let currentSlide = 0;
-let sliderItemWidth = document.querySelector('.slides').clientWidth;
-document.querySelector('.slides').style.width = `${sliderItemWidth} * ${totalSlides}px`;
-
-
-function goPrev() {
-    currentSlide--;
-    if (currentSlide < 0) {
-        currentSlide = totalSlides - 1;
-    }
-    updateMargin();
-}
-
-function goNext() {
-    currentSlide++;
-    if (currentSlide > (totalSlides - 1)) {
-        currentSlide = 0;
-    }
-    updateMargin()
+    projectsItem.forEach(item => {
+        if (item.classList.contains('hidden')) {
+            item.classList.remove('hidden')
+            item.classList.add('show')
+            item.style.display = 'flex'
+            showProjectsButton.innerHTML = 'Ver menos'
+        } else if (item.classList.contains('show')) {
+            item.classList.remove('show');
+            item.classList.add('hidden')
+            item.style.display = 'none'
+            showProjectsButton.innerHTML = 'Ver mais'
+        }
+    })
 }
 
 
-function updateMargin() {
-    let sliderItemWidth = document.querySelector('.slide').clientWidth;
-    let newmargin = (currentSlide * sliderItemWidth);
-    document.querySelector('.slides').style.marginLeft = ` -${newmargin}px`
-}
 
-/* setInterval(goNext, 6000)  */
