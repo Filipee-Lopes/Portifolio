@@ -9,7 +9,6 @@ function showMenuMobile() {
 }
 
 //Function set vanilla Tilt
-
 function animationVanillaTilt() {
     let display = document.body.clientWidth;
     let elemento = document.querySelector('.photo-animation')
@@ -21,10 +20,7 @@ function animationVanillaTilt() {
         });
     }
 }
-
 animationVanillaTilt()
-
-
 
 //Function set Intersection Observer
 let options = {
